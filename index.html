@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1261d6">
+<title>AV Learning</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <button class="hamb" id="hamb">☰</button>
+  <div class="brand"><div class="logo">AV</div><div><b>AV Learning</b><small>Belajar jadi lebih gampang</small></div></div>
+  <div class="top-actions"><span id="userBadge"></span><button class="ghost" id="logoutBtn">Keluar</button></div>
+</header>
+
+<main>
+<section id="loginPage" class="page auth-page">
+  <div class="auth-card">
+    <div class="big-logo">AV</div>
+    <h1>Selamat datang di AV Learning</h1>
+    <p>Platform belajar dari kelas 1 SD sampai kelas 3 SMA.</p>
+    <input id="nameInput" placeholder="Nama kamu" maxlength="30">
+    <select id="levelInput"><option value="">Pilih jenjang</option><option>SD</option><option>SMP</option><option>SMA</option></select>
+    <select id="classInput"><option value="">Pilih kelas</option></select>
+    <button class="primary full" id="loginBtn">Masuk & Mulai Belajar</button>
+  </div>
+</section>
+
+<section id="appPage" class="page hidden">
+  <aside id="sidebar">
+    <button data-view="dashboard" class="nav active">🏠 Beranda</button>
+    <button data-view="subjects" class="nav">📚 Materi</button>
+    <button data-view="quizHistory" class="nav">📝 Kuis</button>
+    <button data-view="essayHistory" class="nav">✍️ Essay</button>
+    <button data-view="progress" class="nav">📊 Progress</button>
+    <button data-view="profile" class="nav">👤 Profil</button>
+  </aside>
+  <div id="content"></div>
+</section>
+</main>
+
+<div id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
